@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-	header {
-		width: 1200px;
-		margin: 0 auto;
-	}
+	<title>Trevor Jacob</title>
+	<link rel="stylesheet" href="/assets/styles/main.min.css" />
+</head>
+<body data-ng-app="Trevor">
+	<header>
+		<h1>Trevor Jacob</h1>
+		<nav>
+			<ul class="nav nav-main">
+				<li>
+					<a href="javascript: void(0);">Test</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 
-	.shadow-inset-top, .stratum-gradient, .store-home-stratum, .style-display-gradient {
-		box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.4) inset;
-	}
+	<div class="content">
+		<section></section>
+		<section class="stratum stratum-gradient"></section>
+		<section class="stratum stratum-gradient"></section>
+		<section class="stratum stratum-gradient"></section>
+		<section class="stratum stratum-gradient"></section>
+	</div>
 
-	.stratum-gradient {
-		background-color: #FFFFFF;
-		background-image: -moz-linear-gradient(center top , #E5E5E5, #FFFFFF);
-		background-repeat: no-repeat;
-		background-size: 100% 52px;
-	}
+	<script type="text/javascript" src="/assets/scripts/libs/jquery-2.1.0.min.js"></script>
 
-	.stratum, .stratum-gray, .stratum-light-gray, .stratum-black, .stratum-white, .stratum-gradient, .stratum-image, .stratum-parallax-image, .store-home-stratum, .stratum-parallax-banner {
-		position: relative;
-		width: 100%;
-	}
+	<script type="text/javascript" src="/assets/scripts/libs/angular_1.2.10/angular.js"></script>
+	<script type="text/javascript" src="/assets/scripts/libs/angular_1.2.10/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/assets/scripts/libs/angular_1.2.10/angular-resource.min.js"></script>
+	<script type="text/javascript" src="/assets/scripts/libs/angular_1.2.10/angular-route.min.js"></script>
+	<script type="text/javascript" src="/assets/scripts/libs/angular_1.2.10/angular-sanitize.min.js"></script>
 
-	.stratum-padding, .stratum-gray, .stratum-light-gray, .stratum-black, .stratum-white, .stratum-gradient {
-		padding-top: 55px;
-	}
-</style>
-
+	<!-- APP -->
+	<script type="text/javascript" src="/app/app.js"></script>
+</body>
+<!--
 <script type="text/javascript">
 	function onLoad() {
 		window.onscroll = function() {
@@ -36,26 +44,5 @@
 		}
     }
 </script>
-
-</head>
-<body >
-	<header class="">
-		<nav>
-			<h1>Trevor Jacob</h1>
-		</nav>
-		<ul class="nav nav-main">
-			<li>
-				<a></a>
-			</li>
-		</ul>
-	</header>
-	<div class="content">
-		<section></section>
-		<section class="stratum stratum-gradient"></section>
-		<section class="stratum stratum-gradient"></section>
-		<section class="stratum stratum-gradient"></section>
-		<section class="stratum stratum-gradient"></section>
-	</div>
-</body>
-
-</hml>
+-->
+</html>

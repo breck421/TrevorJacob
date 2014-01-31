@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function(grunt) {
-
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		concat: {
@@ -28,21 +27,25 @@ module.exports = function(grunt) {
 		},
 		jshint: {
 			// define the files to lint
-			files: ['Gruntfile.js', 'app/**/*.js'],
+			files: ['Gruntfile.js', 'app/app.js', 'app/**/*.js'],
 			// configure JSHint (documented at http://www.jshint.com/docs/)
 			options: {
 				// options here to override JSHint defaults
 				jshintrc: 'conf/jshintrc'
-				// globals: {
-				// 	jQuery: true,
-				// 	console: true,
-				// 	module: true,
-				// 	document: true
-				// }
+			}
+		},
+		validation: {
+			options: {
+					reset: grunt.option('reset') || false,
+					stoponerror: false,
+					relaxerror: ["Bad value X-UA-Compatible for attribute http-equiv on element meta."] //ignores these errors
+			},
+			files: {
+					src: ['index.html']//, 'app/**/*.html'
 			}
 		},
 		watch: {
-			files: ['<%= jshint.files %>'],
+			files: ['app/**/*.js'],
 			tasks: ['test']
 		}
 	});
@@ -52,9 +55,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-html-validation');
+
 
 	// this would be run by typing "grunt test" on the command line
-	grunt.registerTask('test', ['jshint']);
+	grunt.registerTask('test', ['jshint', 'validation']);
+	grunt.registerTask('html', ['validation']);
 
 	// the default task can be run just by typing "grunt" on the command line
 	grunt.registerTask('default', ['jshint']);

@@ -1,5 +1,32 @@
+@import 'libs/normalize_2.1.2.less';
+
 @import 'less/variables.less';
 @import 'less/mixins.less';
+@import 'less/ngStyles.less';
 @import 'less/utilities.less';
 @import 'less/typography.less';
-@import 'less/ngStyles.less';
+
+header {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.shadow-inset-top, .stratum-gradient, .store-home-stratum, .style-display-gradient {
+	box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.4) inset;
+}
+
+.stratum-gradient {
+	background-color: #FFFFFF;
+	background-image: -moz-linear-gradient(center top , #E5E5E5, #FFFFFF);
+	background-repeat: no-repeat;
+	background-size: 100% 52px;
+}
+
+.stratum, .stratum-gray, .stratum-light-gray, .stratum-black, .stratum-white, .stratum-gradient, .stratum-image, .stratum-parallax-image, .store-home-stratum, .stratum-parallax-banner {
+	position: relative;
+	width: 100%;
+}
+
+.stratum-padding, .stratum-gray, .stratum-light-gray, .stratum-black, .stratum-white, .stratum-gradient {
+	padding-top: 55px;
+}
