@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 			files: ['app/**/*.js'],
 			tasks: ['test']
 		}
-	});
+	})
 
 	// Load the Grunt plugins we need. These should have all been installed through npm
 	grunt.loadNpmTasks('grunt-contrib-uglify');
