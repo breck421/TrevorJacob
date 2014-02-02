@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 			files: ['app/**/*.js'],
 			tasks: ['test']
 		}
-	})
+	});
 
 	// Load the Grunt plugins we need. These should have all been installed through npm
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -61,6 +61,7 @@ module.exports = function(grunt) {
 	// this would be run by typing "grunt test" on the command line
 	grunt.registerTask('test', ['jshint', 'validation']);
 	grunt.registerTask('html', ['validation']);
+	grunt.registerTask('js', ['jshint']);
 
 	// the default task can be run just by typing "grunt" on the command line
 	grunt.registerTask('default', ['jshint']);
