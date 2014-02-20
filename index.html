@@ -1,28 +1,222 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trevor Jacob</title>
+	<title>Trevor Jacob: Olympic Snowboarder </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="global" name="distribution" />
+	<meta content="follow, all" name="robots" />
+	<meta content="en" name="language" />
+
+	<meta content="Jordan Papaleo" name="author" />
+	<meta content="US Snowboard cross champion and Olympian Trevor Jacob" name="description">
+	<meta content="US Snowboard cross champion and Olympian Trevor Jacob" name="abstract">
+	<meta content="Trevor Jacob" property="og:title">
+	<meta content="Official website for Trevor Jacob; US Snowboard Team member, compteted at 2014 Winter Olympics Sochi" name="description">
+	<meta content="Trevor Jacob, Trevor Jacob twitter, Trevor Jacob u.s. snowboarding, Trevor Jacob olympics" name="keywords">
+	<meta content="Trevor Jacob was born in Malibu, CA, he grew up doing every activity possible.  Spending all of his time Skateboarding, dirtbiking, BMXing, snowboarding, etc, all while hating school and watching the clock tick, ready to be out of school and live his dreams. At the young age of 9 years old, a parents worse nightmare of a kid by the name of Trevor, convinced his parents to let him move to Mammoth.  Spending the next few years on the mountain everyday after elementary school, Trevor began to love snowboarding more and more each day.   It only took a little time before Trevor found the competitive side of snowboarding and at the young age of 13 he won the U.S Open and became the youngest to ever qualify for the finals at the U.S OPEN of snowboarding for half pipe.   With the attack of hype of media and sponsors at the age of 13, Trevor's snowboarding career quickly went down the drain with the stress of expectations of sponsors, agents, and media.  The contest results went downhill fast as Trevor quickly became burnt out on the sport as a whole and frustratingly spent the next few years trying to keep up his reputation as the new kid on the contest scene.   At the age of 18, Trevor officially stopped snowboarding as a whole.  He began to find his rush in other things he loved, such as skydiving, dirt biking, snowmobiling, surfing, skateboarding, and traveling across country by freight train.  It was 2 years later at the age of 19 that Trevor got invited by his long time friend, Lyn-Z Adams Pastrana to become part of the Nitro Circus Live tour and do wild stunts in front of huge crowds and travel the world filming for their MTV show.  Trevor got a call from her, and was on a plane to Europe that same day.  It was around the same time Trevor began to miss snowboarding, and decided to explore a part of snowboarding he had never explored before, boardercross.  With a long time dream of representing the United States of America in the Olympic Games. He began to make this dream a reality, managing his time between Nitro Circus stunts and training with the U.S snowboard team.   This 20 year old is off to Russia this February to represent the United States of America as the number one qualifier from the USA." property="og:description">
+
+
 	<link rel="stylesheet" href="assets/styles/main.min.css" />
 </head>
-<body data-ng-app="Trevor">
-	<section id="home">
-		<h1 class="open">trevor<span>jacob</span></h1>
-	</section>
+<body data-ng-app="App">
+		<h1 class="open site-title">trevor<span>jacob</span></h1>
+		<!-- <nav class="site-nav">
+			<ul class="nav nav-inline">
+				<li><a scroll-to-bookmark="home">Home</a></li>
+				<li><a scroll-to-bookmark="about">About</a></li>
+				<li><a scroll-to-bookmark="gallery">Gallery</a></li>
+				<li><a scroll-to-bookmark="contact">Contact</a></li>
+			</ul>
+		</nav> -->
 
-	<section id="page2">
-		<h1 class="open">trevor<span>jacob</span></h1>
-	</section>
+		<div class="site-content" id="js_siteContent">
+			<section ng-controller="HomeController" id="home" scroll-bookmark="home">
+				<div>
+
+				</div>
+			</section>
+
+			<section id="leadtext" class="section-text">
+				<article>
+					<p>Whether he is hopping trains or jumping over them, doing double backs on a skateboard, manning up to the mega ramp as a part of the Nitro Circus entourage, flipping snowmobiles, jumping off of chairlifts, jumping onto chairlifts, setting speed records or qualifying for the Olympics in boardercross this kid keeps the challenges coming and is always entertaining. <span style="color: #363636; float: right; font-size: 22px;">Pat Bridges</span></p>
+
+				</article>
+			</section>
+
+			<section id="img1" scroll-bookmark='img1'>
+			</section>
+
+			<section ng-controller='AboutController' id="about" scroll-bookmark='about'>
+				<article>
+					<div>
+						<p>Trevor Jacob was born in Malibu, CA, he grew up doing every activity possible.  Spending all of his time Skateboarding, dirtbiking, BMXing, snowboarding, etc, all while hating school and watching the clock tick, ready to be out of school and live his dreams.</p>
+						<p>At the young age of 9 years old, a parents worse nightmare of a kid by the name of Trevor, convinced his parents to let him move to Mammoth.  Spending the next few years on the mountain everyday after elementary school, Trevor began to love snowboarding more and more each day.  </p>
+						<p>It only took a little time before Trevor found the competitive side of snowboarding and at the young age of 13 he won the U.S Open and became the youngest to ever qualify for the finals at the U.S OPEN of snowboarding for half pipe.  </p>
+						<p>With the attack of hype of media and sponsors at the age of 13, Trevor's snowboarding career quickly went down the drain with the stress of expectations of sponsors, agents, and media.  The contest results went downhill fast as Trevor quickly became burnt out on the sport as a whole and frustratingly spent the next few years trying to keep up his reputation as the new kid on the contest scene.  </p>
+						<p>At the age of 18, Trevor officially stopped snowboarding as a whole.  He began to find his rush in other things he loved, such as skydiving, dirt biking, snowmobiling, surfing, skateboarding, and traveling across country by freight train.  It was 2 years later at the age of 19 that Trevor got invited by his long time friend, Lyn-Z Adams Pastrana to become part of the Nitro Circus Live tour and do wild stunts in front of huge crowds and travel the world filming for their MTV show.  Trevor got a call from her, and was on a plane to Europe that same day.  It was around the same time Trevor began to miss snowboarding, and decided to explore a part of snowboarding he had never explored before, boardercross.  With a long time dream of representing the United States of America in the Olympic Games. He began to make this dream a reality, managing his time between Nitro Circus stunts and training with the U.S snowboard team.  </p>
+						<p>This 20 year old is off to Russia this February to represent the United States of America as the number one qualifier from the USA.   </p>
+					</div>
+				</article>
+			</section>
+
+			<section ng-controller='GalleryController' id="gallery" scroll-bookmark='gallery'>
+			</section>
+
+			<section id="img2" scroll-bookmark='img2'>
+			</section>
+
+			<!-- <section id="instagallery">
+				<iframe src="http://snapwidget.com/sl/?u=Z2tjNGxpZmV8aW58NzAwfDN8M3x8eWVzfDV8bm9uZXxvblN0YXJ0fHllcw==&v=9214" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="margin-top: 50px; margin-left: 200px; border:none; overflow:hidden; width:715px; height:715px"></iframe>
+			</section> -->
+
+			<section id="img3" scroll-bookmark='img3'>
+			</section>
 
 
-	<script type="text/javascript" src="assets/scripts/libs/jquery-2.1.0.min.js"></script>
+			<section ng-controller='ContactController' id="contact" scroll-bookmark='contact'>
+				<article>
+					<form role="form" name="contactForm" ng-submit="formSubmit(contactForm)">
+						<div class="form-group">
+							<input class="form-control" ng-model="name" name="name" id="name" type="text" placeholder="Name" required/>
+						</div>
+						<div class="form-group">
+							<input class="form-control" ng-model="email" name="email" id="email" type="email" placeholder="Email Address" required/>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" ng-model="message" name="message" id="message" rows="5" required></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary btn-lg">Send Me A Message</button>
+					 		<a class="btn btn-link btn-lg" href='mailto:trevorj93@earthlink.net'>Or email me</a>
+						</div>
+					</form>
+				</article>
+			</section>
 
-	<script type="text/javascript" src="assets/scripts/libs/angular_1.2.10/angular.js"></script>
-	<script type="text/javascript" src="assets/scripts/libs/angular_1.2.10/angular-animate.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/libs/angular_1.2.10/angular-resource.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/libs/angular_1.2.10/angular-route.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/libs/angular_1.2.10/angular-sanitize.min.js"></script>
+			<footer class="site-footer" ng-controller="FooterController">
+				<div class="pull-right">Website by <a href="http://www.jordanpapaleo.com">Jordan Papaleo</a></div>
+				<social-media></social-media>
+				<div style="text-align: center;">&copy; {{ currentYear }} Trevor Jacob</div>
+			</footer>
+		</div>
+
+	<script type="text/javascript" src="libs/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="libs/jquery.scrollTo-1.4.3.1-min.js"></script>
+
+	<script type="text/javascript" src="libs/angular_1.2.10/angular.js"></script>
+	<script type="text/javascript" src="libs/angular_1.2.10/angular-animate.min.js"></script>
+	<script type="text/javascript" src="libs/angular_1.2.10/angular-resource.min.js"></script>
+	<script type="text/javascript" src="libs/angular_1.2.10/angular-route.min.js"></script>
+	<script type="text/javascript" src="libs/angular_1.2.10/angular-sanitize.min.js"></script>
 
 	<!-- APP -->
-	<script type="text/javascript" src="/app/app.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+
+	<!-- HOME -->
+	<script type="text/javascript" src="app/views/home/HomeController.js"></script>
+
+	<!-- ABOUT -->
+	<script type="text/javascript" src="app/views/about/AboutController.js"></script>
+
+	<!-- Gallery -->
+	<script type="text/javascript" src="app/views/gallery/GalleryController.js"></script>
+
+	<!-- CONTACT -->
+	<script type="text/javascript" src="app/views/contact/ContactController.js"></script>
+
+	<!-- FOOTER -->
+	<script type="text/javascript" src="app/views/footer/FooterController.js"></script>
+
+	<!-- COMMON: Services -->
+	<script type="text/javascript" src="app/services/AjaxService.js"></script>
+	<script type="text/javascript" src="app/services/EmailService.js"></script>
+	<script type="text/javascript" src="app/services/SocialMediaService.js"></script>
+
+	<script type="text/javascript" src="app/directives/SocialMediaDirective.js"></script>
+
+
+
+	<!--<script type="text/javascript">
+		App.directive('scrollToBookmark', function() {
+		    var ScrollTo = function(offset) {
+		    	this.pixelOffset.x = offset.x;
+		    	this.pixelOffset.y = offset.y;
+		    };
+
+		    ScrollTo.prototype.init = function() {
+		    	this.removeStyles();
+
+				var styleSheet = this.createStyles();
+				var head = document.getElementsByTagName('head')[0];
+					head.appendChild(styleSheet);
+
+				var content = document.getElementById('js_siteContent');
+					content.style["-webkit-transform"] = '';
+					content.style["-moz-transform"] = '';
+					content.style["-ms-transform"] = '';
+					content.style["-0-transform"] = '';
+					content.style["transform"] = '';
+					content.className = "animate";
+		    };
+
+		    ScrollTo.prototype.createStyles = function () {
+				var tempStyle = document.createElement("style");
+					tempStyle.id = "temp";
+					tempStyle.type = "text/css";
+
+				var styleText = document.createTextNode("#slides.animate {" +
+					"-webkit-transform: translate3d(" + this.pixelOffset.x + "px, " + this.pixelOffset.y + "px, 0);" +
+					"-moz-transform: translate3d(" + this.pixelOffset.x + "px, " + this.pixelOffset.y + "px, 0);" +
+					"-ms-transform: translate3d(" + this.pixelOffset.x + "px, " + this.pixelOffset.y + "px, 0);" +
+					"-0-transform: translate3d(" + this.pixelOffset.x + "px, " + this.pixelOffset.y + "px, 0);" +
+					"transform: translate3d(" + this.pixelOffset.x + "px, " + this.pixelOffset.y + "px, 0);" +
+				"}");
+
+				tempStyle.appendChild(styleText);
+
+				return tempStyle;
+			};
+
+		    ScrollTo.prototype.removeStyles = function() {
+				var temp = document.getElementById("temp");
+
+				if(temp) {
+					temp.parentNode.removeChild(temp);
+				}
+			};
+
+
+		    return {
+		    	restrict: 'A',
+		    	replace: false,
+				link: function(scope, $el, attrs) {
+					var value = attrs.scrollToBookmark;
+
+					$el.on('click', function() {
+
+						scope.$apply(function() {
+							var selector = "[scroll-bookmark='"+ value +"']";
+							var $target = $(selector);
+
+							// if($target.length) {
+								var offset = {
+									x: $target.offset().top,
+									y: $target.offset().left
+								}
+
+							// 	// new ScrollTo(offset);
+
+							// 	// window.scrollTo(0, offset.y);
+							// }
+
+							// $(window).scrollTo($("#" + value), 1000, {easing:'swing'});
+							$("body,html").animate({scrollTop: offset.x}, "slow");
+						});
+					});
+				}
+		    };
+		});
+	</script>-->
 </body>
 </html>

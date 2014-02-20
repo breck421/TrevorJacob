@@ -34,16 +34,25 @@ module.exports = function(grunt) {
 				jshintrc: 'conf/jshintrc'
 			}
 		},
-		validation: {
-			options: {
-					reset: grunt.option('reset') || false,
-					stoponerror: false,
-					relaxerror: ["Bad value X-UA-Compatible for attribute http-equiv on element meta."] //ignores these errors
-			},
-			files: {
-					src: ['index.html']//, 'app/**/*.html'
+		htmlhint: {
+			build: {
+				options: {
+					'attr-lowercase': true,
+					'attr-value-double-quotes': true,
+					'doctype-first': false,
+					'head-script-disabled': false,
+					'id-unique': true,
+					'img-alt-require': true,
+					'tag-self-close': true,
+					'tag-pair': true,
+					'tagname-lowercase': true,
+					'spec-char-escape': true,
+					'style-disabled': true
+				},
+				src: ["app/index.html", "app/js/views/**/*.html"]
 			}
 		},
+
 		watch: {
 			files: ['app/**/*.js'],
 			tasks: ['test']
@@ -55,7 +64,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-html-validation');
+	grunt.loadNpmTasks('grunt-htmlhint');
+
+	grunt.registerTask('html', ['htmlhint']);
+	grunt.registerTask('valid', ['jshint', 'htmlhint']);
 
 
 	// this would be run by typing "grunt test" on the command line

@@ -6,70 +6,297 @@
 @import 'less/utilities.less';
 @import 'less/typography.less';
 @import 'less/mainNav.less';
+@import 'less/contact.less';
+@import 'less/buttons.less';
+
+
 
 html, body {
 	height: 100%;
 	position: relative;
+	width: 100%;
 }
 
-#home {
+
+.section-cover() {
 	.background-cover();
 	.box-sizing();
+	height: 100%;
+	width: 100%;
+	padding-top: 75px;
+}
 
-	background-image: url('../images/background/train.jpg');
-	background-position: right top;
-	// position: absolute;
-	// bottom: 0;
-	// left: 0;
-	// right: 0;
-	// top: 0;
+.no-space() {
+	margin: 0;
+	padding: 0;
+}
+
+.centered() {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.frame-light() {
 	border: 15px solid #e1e1e1;
-	// .border-radius(4px;)
+}
 
-	h1 {
-		bottom: 24px;
-		color: #363636;
+.frame-dark() {
+	border: 15px solid #363636;
+}
+
+@transparent: rgba(255,255,255,0);
+
+// TITLE---------------------------------
+.site-title {
+	.no-space();
+	font-family: 'Audiowide', cursive;
+
+	top: 36px;
+	color: #363636;
+	font-size: 42px;
+	position: fixed;
+	right: 20px;
+	text-transform: lowercase;
+
+	span {
+		font-family: 'Audiowide', cursive;
+		color: #e1e1e1;
 		font-size: 42px;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		right: 10px;
-		text-transform: lowercase;
+	}
+}
+// TITLE---------------------------------
 
-		span {
-			color: #e1e1e1;
-			font-size: 42px;
+
+// NAV---------------------------------
+.site-nav {
+	.no-space();
+	width: 100%;
+	text-align: center;
+	backgound-color: @transparent;
+	position: fixed;
+	top:0;
+
+	.nav {
+		.centered();
+		height: 50px;
+		background-color: red;
+
+		width: 980px;
+
+		li {
+			.no-space();
+			display: inline-block;
+			list-style-type: none;
+		}
+
+		&.nav-inline {
+
+		}
+	}
+}
+// NAV---------------------------------
+
+
+.lead-text {
+	color: @lightestgrey;
+	font-size: 18px;
+}
+
+.site-content {
+	min-width: 980px;
+	height: 100%;
+	width: 100%;
+
+	section{
+		background-attachment: fixed;
+		border-top: 1px solid rgba(255,255,255,0.3);
+		border-bottom: 1px solid rgba(0,0,0,0.4);
+		box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	}
+
+
+	// HOME---------------------------------
+	#home {
+		.section-cover();
+		background-image: url('../images/background/train.jpg');
+		background-position: right top;
+	}
+	// HOME---------------------------------
+
+	#leadtext {
+		.frame-dark();
+	}
+
+	// IMG1---------------------------------
+	#img1 {
+		.section-cover();
+		background-image: url('../images/background/podium.jpg');
+		background-position: center center;
+	}
+	// IMG1---------------------------------
+
+	// ABOUT---------------------------------
+	#about {
+		.section-cover();
+		.frame-light();
+
+		background-image: url('../images/background/skatepark.jpg');
+		background-position: center top;
+
+
+		> article {
+			> div {
+				background-color: rgba(255, 255, 255, 0.5);
+				margin-left: 55%;
+				margin-top: 42px;
+				padding: 10px;
+				width: 40%;
+				-webkit-box-shadow: 2px 2px 9px 0px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow:    2px 2px 9px 0px rgba(50, 50, 50, 0.75);
+				box-shadow:         2px 2px 9px 0px rgba(50, 50, 50, 0.75);
+
+				p {
+					font-size: 13px;
+					margin-bottom: 6px;
+				}
+			}
+		}
+	}
+	// ABOUT---------------------------------
+
+	// IMG2---------------------------------
+	#img2 {
+		.section-cover();
+		.frame-dark();
+		background-image: url('../images/background/skate_bowl.jpg');
+		background-position: left top;
+	}
+	// IMG1---------------------------------
+
+	// GALLERY---------------------------------
+	#gallery {
+		.section-cover();
+		background-image: url('../images/background/snowmo.jpg');
+		background-position: right top;
+	}
+	// GALLERY---------------------------------
+
+	#instagallery {
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/icons/darkPat.jpg');
+		background-repeat: repeat;
+	}
+
+	// IMG3---------------------------------
+	#img3 {
+		.section-cover();
+		background-image: url('../images/background/sky_dive.jpg');
+		background-position: center top;
+	}
+	// IMG3---------------------------------
+
+	// CONTACT---------------------------------
+	#contact {
+		.section-cover();
+		.frame-light();
+
+		background-image: url('../images/background/xcourse.jpg');
+		background-position: right top;
+
+
+		form {
+			background-color: rgba(0, 0, 0, 0.5);
+			box-shadow: 2px 2px 9px 0 rgba(50, 50, 50, 0.75);
+			padding: 10px;
+		}
+	}
+	// CONTACT---------------------------------
+}
+
+footer {
+	padding-top: 55px;
+	padding-bottom: 25px;
+	width: 96%;
+	background-color: #333333;
+
+	padding-left: 2%;
+	padding-right: 2%;
+	min-height: 75px;
+
+	div {
+		color: #E1E1E1;
+		font-size: 18px;
+	}
+
+
+	a {
+		font-size: 18px;
+	}
+}
+
+.section-text {
+	padding: 48px 24px;
+	background-image: -moz-linear-gradient(center top , #E5E5E5, #FFFFFF);
+
+	p {
+		width: 75%;
+		font-size: 22px;
+		line-height: 28px;
+		font-weight: 400;
+		color: #999;
+	}
+}
+
+
+
+#contact {
+	h2 {
+		margin-top: 0;
+		padding-top: 20px;
+	}
+
+	form {
+		margin: 50px auto 0 auto;
+		width: 400px;
+	}
+
+	.btn-primary {
+		background-color: @primary;
+		border-top-color: darken(@primary, 5%);
+		border-left-color: darken(@primary, 10%);
+		border-right-color: darken(@primary, 10%);
+		border-bottom-color: darken(@primary, 20%);
+
+		&:hover, &.hover, &[hover] {
+			background-color: darken(@primary, 10%);
+			border-top-color: darken(@primary, 15%);
+			border-left-color: darken(@primary, 20%);
+			border-right-color: darken(@primary, 20%);
+			border-bottom-color: darken(@primary, 30%);
+		}
+	}
+
+	.btn-link {
+		color: @primary;
+
+		&:hover, &.hover, &[hover] {
+			color: @primary;
+			text-decoration: underline;
 		}
 	}
 }
 
-#page2 {
-	.background-cover();
-	.box-sizing();
+.nav {
+	li {
+		display: inline-block;
 
-	background-image: url('../images/background/train.jpg');
-	background-position: right top;
-	// position: absolute;
-	// bottom: 0;
-	// left: 0;
-	// right: 0;
-	// top: 0;
-	border: 15px solid #e1e1e1;
-	// .border-radius(4px;)
-
-	h1 {
-		bottom: 24px;
-		color: #363636;
-		font-size: 42px;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		right: 10px;
-		text-transform: lowercase;
-
-		span {
-			color: #e1e1e1;
-			font-size: 42px;
+		a {
+			padding: 5px 10px;
 		}
 	}
+}
+
+.social-media {
+	float: left;
 }
